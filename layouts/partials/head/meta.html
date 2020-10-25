@@ -1,5 +1,16 @@
 {{- $params := .Scratch.Get "params" -}}
 
+{{if isset .Params "keywords"}}
+<meta name="keywords" content="{{ delimit .Keywords " " }}" />
+{{else}}
+{{if isset .Params "tags"}}
+<meta name="keywords" content="{{ delimit .Params.Tags ", " }}" />
+{{else}}
+<meta name="keywords" content="digital marketing, 
+         content marketing, online tactics, seo tips" />
+{{end}}
+{{end}}
+
 <meta name="Description" content="{{ $params.description | default .Site.Params.description }}">
 
 {{- template "_internal/opengraph.html" . -}}

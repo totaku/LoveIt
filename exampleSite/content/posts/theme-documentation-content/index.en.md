@@ -20,6 +20,9 @@ toc:
   auto: false
 math:
   enable: true
+
+code:
+  copy: true
 ---
 
 Find out how to create and organize your content quickly and intuitively in **LoveIt** theme.
