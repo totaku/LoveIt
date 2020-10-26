@@ -113,11 +113,13 @@ other = "включен в {{ .Categories }}"
 
 [wordCount]
 one = "Одно слово"
-other = "{{ .Count }} слов"
+few = "{{ .Count }} слов"
+many = "{{ .Count }} слов"
 
 [readingTime]
-one = "Одна минута"
-other = "{{ .Count }} минут"
+one = "~1 мин"
+few = "~{{ .Count }} мин"
+many = "~{{ .Count }} мин"
 
 [views]
 other = "просмотров"
