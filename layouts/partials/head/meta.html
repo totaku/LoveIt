@@ -1,17 +1,20 @@
 {{- $params := .Scratch.Get "params" -}}
 
 {{if isset .Params "keywords"}}
-<meta name="keywords" content="{{ delimit .Keywords " " }}" />
+<meta name="keywords" content="{{ delimit .Params.Keywords " " }}" />
 {{else}}
 {{if isset .Params "tags"}}
 <meta name="keywords" content="{{ delimit .Params.Tags ", " }}" />
 {{else}}
-<meta name="keywords" content="digital marketing, 
-         content marketing, online tactics, seo tips" />
+<meta name="keywords" content="{{ delimit .Site.Params.Keywords ", " }}" />
 {{end}}
 {{end}}
 
+{{if isset .Params "description"}}
+<meta name="Description" content="{{ $params.description }}" >
+{{else}}
 <meta name="Description" content="{{ $params.description | default .Site.Params.description }}">
+{{end}}
 
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
