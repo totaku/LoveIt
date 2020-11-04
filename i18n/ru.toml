@@ -121,7 +121,7 @@ other = "{{ .Count }} слов"
 one = "~1 мин"
 few = "~{{ .Count }} мин"
 many = "~{{ .Count }} мин"
-other = "{{ .Count }} мин"
+other = "~{{ .Count }} мин"
 
 [views]
 other = "просмотров"
@@ -142,7 +142,7 @@ other = "Назад"
 other = "Домой"
 
 [readMore]
-other = "Читать больше"
+other = "Подробнее"
 # === posts/single.html ===
 
 # === 404.html ===
