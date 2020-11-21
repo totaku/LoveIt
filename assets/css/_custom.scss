@@ -2,3 +2,30 @@
 // Custom style
 // 自定义样式
 // ==============================
+.note {
+    p {
+      margin-top: 3rem;
+    }
+
+    b, strong {
+      font-weight: bold;
+
+      [theme=dark] & {
+        color: #ddd;
+      }
+    }
+
+    @include link(false, false);
+
+    a {
+      @include overflow-wrap(break-word);
+
+      [theme=dark] & b, [theme=dark] & strong {
+        color: $single-link-color-dark;
+      }
+    }
+
+    [theme=dark] a:hover b, [theme=dark] a:hover strong {
+      color: $single-link-hover-color-dark;
+    }
+  }
