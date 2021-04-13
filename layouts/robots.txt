@@ -3,6 +3,8 @@ User-agent: *
 Disallow: /images/
 Disallow: /js/
 Disallow: /css/
+Disallow: /tags/
+Disallow: /tags/*
 
 User-agent: MJ12bot
 Disallow: /
